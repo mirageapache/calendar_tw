@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    # 使用當前目錄的 Dockerfile 建立映像檔
+    build: .
+    
+    # 容器名稱
+    container_name: calendar_tw_web
+    
+    # 啟動指令
+    command: python manage.py runserver 0.0.0.0:8000
+    
+    # 工作目錄
+    working_dir: /app/calendarTW
+    
+    # 將本地的 port 8000 對應到容器的 port 8000
+    ports:
+      - "8000:8000"
+    
+    # 掛載本地目錄到容器（方便開發時即時更新）
+    volumes:
+      - .:/app
+    
+    # 環境變數
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DEBUG=True
+    
+    # 容器重啟政策
+    restart: unless-stopped
