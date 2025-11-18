@@ -1,3 +1,15 @@
 asgiref==3.10.0
 Django==5.2.7
 sqlparse==0.5.3
+
+# Django REST Framework
+djangorestframework==3.15.2
+
+# API Documentation
+drf-spectacular==0.28.0
+
+# CORS headers
+django-cors-headers==4.6.0
+
+# Filtering and searching
+django-filter==24.3
