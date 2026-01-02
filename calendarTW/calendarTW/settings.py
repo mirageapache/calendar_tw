@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "corsheaders",
     "django_filters",
+    # Local apps
+    "calendar_api",
 ]
 
 MIDDLEWARE = [
