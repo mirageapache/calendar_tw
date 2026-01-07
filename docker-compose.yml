@@ -26,6 +26,8 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - DEBUG=True
+      # PostgreSQL 連線 (設定後會自動使用，不設定則使用 SQLite)
+      # - DATABASE_URL=postgres://user:password@host:5432/dbname
     
     # 容器重啟政策
     restart: unless-stopped

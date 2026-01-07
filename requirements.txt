@@ -13,3 +13,7 @@ django-cors-headers==4.6.0
 
 # Filtering and searching
 django-filter==24.3
+
+# PostgreSQL support
+psycopg2-binary==2.9.9
+dj-database-url==2.3.0

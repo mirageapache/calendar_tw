@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,12 +81,17 @@ WSGI_APPLICATION = "calendarTW.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# 透過環境變數 DATABASE_URL 設定資料庫連線
+# - 開發環境 (無設定): 使用 SQLite
+# - 測試環境 (Render): DATABASE_URL=postgres://user:pass@host:5432/dbname
+# - 生產環境 (AWS/GCP): DATABASE_URL=postgres://user:pass@host:5432/dbname
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 
