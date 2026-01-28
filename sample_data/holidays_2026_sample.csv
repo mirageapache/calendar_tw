@@ -1,0 +1,12 @@
+日期,假日名稱,假日類型,是否農曆,說明
+2026-01-01,中華民國開國紀念日,national,false,國定假日
+2026-01-26,農曆除夕,national,true,農曆十二月三十
+2026-01-27,春節,national,true,農曆正月初一
+2026-01-28,春節,national,true,農曆正月初二
+2026-01-29,春節,national,true,農曆正月初三
+2026-02-28,和平紀念日,national,false,國定假日
+2026-04-03,兒童節,national,false,國定假日
+2026-04-04,清明節,national,false,農曆節氣
+2026-06-25,端午節,national,true,農曆五月初五
+2026-10-01,中秋節,national,true,農曆八月十五
+2026-10-10,國慶日,national,false,國定假日

@@ -17,3 +17,6 @@ django-filter==24.3
 # PostgreSQL support
 psycopg2-binary==2.9.9
 dj-database-url==2.3.0
+
+# Environment variables
+python-dotenv==1.0.0
